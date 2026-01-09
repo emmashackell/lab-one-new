@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Assignment</title>
+</head>
+<body>
+
+  <h1>JavaScript Calculations</h1>
+
+  <script>
+    // ==============================
+    // 1) Kilometres to Miles
+    // ==============================
+    let kilometres = prompt("Enter distance in kilometres:");
+    kilometres = Number(kilometres);
+
+    let miles = kilometres * 0.621371;
+    document.write(`<p>${kilometres} km is equal to ${miles.toFixed(2)} miles</p>`);
+
+    // ==============================
+    // 2) Numeric Grade to Letter Grade
+    // ==============================
+    let grade = prompt("Enter a numeric grade (0–100):");
+    grade = Number(grade);
+
+    let letterGrade;
+
+    if (grade >= 90) {
+      letterGrade = "A";
+    } else if (grade >= 80) {
+      letterGrade = "B";
+    } else if (grade >= 70) {
+      letterGrade = "C";
+    } else if (grade >= 60) {
+      letterGrade = "D";
+    } else {
+      letterGrade = "F";
+    }
+
+    document.write(`<p>Numeric grade ${grade} corresponds to letter grade ${letterGrade}</p>`);
+
+    // ==============================
+    // 3) Volume of a Cylinder
+    // ==============================
+    let diameter = prompt("Enter the diameter of the cylinder (meters):");
+    let height = prompt("Enter the height of the cylinder (meters):");
+
+    diameter = Number(diameter);
+    height = Number(height);
+
+    let radius = diameter / 2;
+    let volume = Math.PI * radius * radius * height;
+
+    document.write(`<p>The volume of the cylinder is ${volume.toFixed(2)} cubic meters</p>`);
+  </script>
+
+</body>
+</html>
